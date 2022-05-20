@@ -1,0 +1,74 @@
+@import '../variables';
+
+$default-color: $grey-3;
+$hover-color: black;
+$focus-color: $blue-2;
+$error-color: $danger;
+$disabled-color: $grey-1;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid $default-color;
+  border-radius: 6px;
+  text-indent: 6px;
+  font-size: 14px;
+
+  height: 2.5rem;
+  width: 11rem;
+
+  &:hover {
+    outline: none !important;
+    border-color: $hover-color;
+    box-shadow: 0 0 1px $hover-color;
+  }
+  &:focus {
+    outline: none !important;
+    border-color: $focus-color;
+    box-shadow: 0 0 1px $focus-color;
+  }
+
+  &.error {
+    outline: none !important;
+    border-color: $error-color;
+    box-shadow: 0 0 1px $error-color;
+      &:hover {
+        border-color: $hover-color;
+        box-shadow: 0 0 1px $hover-color;
+      }
+  }
+
+  &.disabled {
+    background-color: $disabled-color;
+    border: $disabled-color;
+    pointer-events: none;
+  }
+}
+
+label {
+  font-size: 14px;
+  &:hover{color: $hover-color;}
+  &:focus{color: $focus-color;}
+  &.error {color: $error-color;}
+}
+
+.helperText {
+  font-size: 12px;
+  color: $default-color;
+  margin-top: 0;
+}
+.helperText-error {
+  font-size: 12px;
+  color: $error-color;
+  margin-top: 0;
+}
+
+.demo {
+  font-family: $fonts-code;
+  font-size: 14px;
+}
+
+.demolite {color: $grey-3}

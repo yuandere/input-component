@@ -7,7 +7,12 @@
 
 # testing
 /coverage
-
+/src/App.test.js
+/src/setupTests.js
+/src/style.css
+/src/style.css.map
+/src/components/Input.css
+/src/components/Input.css.map
 # production
 /build
 
