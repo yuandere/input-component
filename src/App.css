@@ -8,32 +8,32 @@
   margin-bottom: 2rem;
 }
 
-.input-container {
+.input-box {
   margin-right: 4rem;
 }
 
-/* .input-container label.error {
-  color: black;
-} */
-
-#one-focus,
-#two-focus,
-#three-focus {
-  outline: none !important;
+.marr4 {
+  margin-right: 4rem;
 }
 
-#one-focus {
-  border-color: blue;
-  box-shadow: 0 0 1px blue;
+.inputbar {
+  display: flex;
+  align-items: center;
 }
 
-#two-focus {
-  border-color: #D32F2F;
-  box-shadow: 0 0 1px #D32F2F;
+.three .input-box:nth-child(2) label {
+  color: black
 }
-
-#one-hover,
-#two-hover {
+.three .input-box:nth-child(2) .input-container {
   border-color: black;
   box-shadow: 0 0 1px black;
+  outline: none !important;
+}
+.three .input-box:nth-child(3) label {
+  color: #2962FF
+}
+.three .input-box:nth-child(3) .input-container {
+  border-color: #2962FF;
+  box-shadow: 0 0 1px #2962FF;
+  outline: none !important;
 }

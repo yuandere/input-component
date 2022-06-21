@@ -5,17 +5,61 @@ $hover-color: black;
 $focus-color: $blue-2;
 $error-color: $danger;
 $disabled-color: $grey-1;
+$icon-color: $grey-3;
 
-.input-container {
+.input-box {
   display: flex;
   flex-direction: column;
 }
 
 input {
+  border: none;
+  margin: 0.7rem 0.35rem;
+  background: none;
+  outline: none;
+}
+
+label {font-size: 14px;}
+
+.input-box {
+  label.error {
+    color: $error-color;
+  }
+  &:hover {
+    label {
+      color: $hover-color;
+    }
+    .input-container {
+      border-color: $hover-color;
+      box-shadow: 0 0 1px $hover-color;
+    }
+    div.disabled {
+      border: none;
+      box-shadow: none;
+    }
+    p.helperText,
+    p.helperText-error {color: $hover-color}
+  }
+  &:focus-within {
+    label {
+      color: $focus-color;
+    }
+    .input-container {
+      border-color: $focus-color;
+      box-shadow: 0 0 1px $focus-color;
+    }
+    p.helperText,
+    p.helperText-error {color: $focus-color}
+  }
+}
+
+.input-container {
   border: 1px solid $default-color;
   border-radius: 6px;
   text-indent: 6px;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 
   height: 2.5rem;
   width: 11rem;
@@ -35,24 +79,26 @@ input {
     outline: none !important;
     border-color: $error-color;
     box-shadow: 0 0 1px $error-color;
-      &:hover {
-        border-color: $hover-color;
-        box-shadow: 0 0 1px $hover-color;
-      }
   }
 
   &.disabled {
     background-color: $disabled-color;
     border: $disabled-color;
-    pointer-events: none;
+    cursor: not-allowed;
+    &:hover {box-shadow: none;}
   }
 }
 
-label {
-  font-size: 14px;
-  &:hover{color: $hover-color;}
-  &:focus{color: $focus-color;}
-  &.error {color: $error-color;}
+div.input-size-sm {
+  height: 1.75rem;
+  justify-content: center;
+}
+
+.fullWidth {
+  width: 100%;
+  .input-container {
+    width: 100%
+  }
 }
 
 .helperText {
@@ -66,9 +112,27 @@ label {
   margin-top: 0;
 }
 
+.start-icon,
+.end-icon {
+  flex-direction: row;
+  align-items: center;
+}
+.start-icon input {
+  width: 138px;
+  margin-left: 0;
+}
+.end-icon input {
+  width: 132px;
+  margin-right: 0;
+}
+.end-icon span {
+  justify-self: start;
+}
+.material-icons {color: $icon-color}
+
+// display classes only, feel free to delete
 .demo {
   font-family: $fonts-code;
   font-size: 14px;
 }
-
 .demolite {color: $grey-3}
