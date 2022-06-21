@@ -86,6 +86,7 @@ label {font-size: 14px;}
     border: $disabled-color;
     cursor: not-allowed;
     &:hover {box-shadow: none;}
+    input {cursor: not-allowed}
   }
 }
 
