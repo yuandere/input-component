@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* primary */
+/* secondary */
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  margin: 0.7rem 0.35rem;
+  background: none;
+  outline: none;
+}
+
+label {
+  font-size: 14px;
+}
+
+.input-box label.error {
+  color: #D32F2F;
+}
+.input-box:hover label {
+  color: black;
+}
+.input-box:hover .input-container {
+  border-color: black;
+  box-shadow: 0 0 1px black;
+}
+.input-box:hover div.disabled {
+  border: none;
+  box-shadow: none;
+}
+.input-box:hover p.helperText,
+.input-box:hover p.helperText-error {
+  color: black;
+}
+.input-box:focus-within label {
+  color: #2962FF;
+}
+.input-box:focus-within .input-container {
+  border-color: #2962FF;
+  box-shadow: 0 0 1px #2962FF;
+}
+.input-box:focus-within p.helperText,
+.input-box:focus-within p.helperText-error {
+  color: #2962FF;
+}
+
+.input-container {
+  border: 1px solid #828282;
+  border-radius: 6px;
+  text-indent: 6px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  height: 2.5rem;
+  width: 11rem;
+}
+.input-container:hover {
+  outline: none !important;
+  border-color: black;
+  box-shadow: 0 0 1px black;
+}
+.input-container:focus {
+  outline: none !important;
+  border-color: #2962FF;
+  box-shadow: 0 0 1px #2962FF;
+}
+.input-container.error {
+  outline: none !important;
+  border-color: #D32F2F;
+  box-shadow: 0 0 1px #D32F2F;
+}
+.input-container.disabled {
+  background-color: #f2f2f2;
+  border: #f2f2f2;
+  cursor: not-allowed;
+}
+.input-container.disabled:hover {
+  box-shadow: none;
+}
+.input-container.disabled input {
+  cursor: not-allowed;
+}
+
+div.input-size-sm {
+  height: 1.75rem;
+  justify-content: center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+.fullWidth .input-container {
+  width: 100%;
+}
+
+.helperText {
+  font-size: 12px;
+  color: #828282;
+  margin-top: 0;
+}
+
+.helperText-error {
+  font-size: 12px;
+  color: #D32F2F;
+  margin-top: 0;
+}
+
+.start-icon,
+.end-icon {
+  flex-direction: row;
+  align-items: center;
+}
+
+.start-icon input {
+  width: 138px;
+  margin-left: 0;
+}
+
+.end-icon input {
+  width: 132px;
+  margin-right: 0;
+}
+
+.end-icon span {
+  justify-self: start;
+}
+
+.material-icons {
+  color: #828282;
+}
+
+.demo {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+}
+
+.demolite {
+  color: #828282;
+}/*# sourceMappingURL=Input.css.map */
